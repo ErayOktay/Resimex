@@ -1,0 +1,42 @@
+.form-wrapper {
+    margin: 20px 0;
+}
+
+#searchInput {
+    text-align: center;
+}
+
+.imagelist-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Kartlar arası boşluğu artır */
+    padding: 20px;
+}
+
+.imagelist-wrapper .card {
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* Kenarlıkları yuvarlak yap */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Geçiş efekti ekle */
+    overflow: hidden; /* Resmin kenarları taşmasın */
+    width: 300px; /* Kart genişliğini sabitle */
+}
+
+.imagelist-wrapper .card:hover {
+    transform: translateY(-5px); /* Hover durumunda kartı biraz yukarı kaldır */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Hover durumunda gölgeyi artır */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Resim yüksekliğini sabitle */
+    object-fit: cover; /* Resmin bozulmasını engelle */
+    border-top-left-radius: 10px; /* Resmin üst kenarlarını yuvarlak yap */
+    border-top-right-radius: 10px;
+    transition: transform 0.3s ease; /* Resim büyüme efekti için geçiş ekle */
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1); /* Resmi hover durumunda %10 büyüt */
+}
